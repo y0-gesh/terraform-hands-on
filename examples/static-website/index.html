@@ -17,7 +17,7 @@
     </header>
 
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav" id="navbar">
       <div class="container nav-content">
         <div class="nav-brand">Terraform</div>
 
@@ -124,19 +124,16 @@
     </footer>
     <script>
       const navToggle = document.getElementById("nav-toggle");
-      const navLinks = document.querySelector(".nav-links");
-      const nav = document.querySelector(".nav");
+      const navbar = document.getElementById("navbar");
 
       document.addEventListener("click", function (event) {
-        const clickedInsideNav = nav.contains(event.target);
-
-        if (!clickedInsideNav && navToggle.checked) {
+        if (!navbar.contains(event.target)) {
           navToggle.checked = false;
         }
       });
 
-      // Close menu when clicking a link (mobile UX)
-      navLinks.querySelectorAll("a").forEach((link) => {
+      // Close menu when clicking a link (mobile UX best practice)
+      document.querySelectorAll(".nav-links a").forEach((link) => {
         link.addEventListener("click", () => {
           navToggle.checked = false;
         });

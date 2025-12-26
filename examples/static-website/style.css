@@ -25,13 +25,12 @@ body {
 }
 
 .nav {
-  background: #ffffff;
-  border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
 }
-
 
 .nav-content {
   display: flex;
@@ -137,7 +136,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
- .nav-links {
+  .nav-links {
     position: absolute;
     top: 60px;
     left: 0;
