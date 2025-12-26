@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terraform Learning Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.svg" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <h1>Terraform Learning Portfolio</h1>
+        <p>Infrastructure as Code • AWS • DevOps Best Practices</p>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container nav-content">
+        <div class="nav-brand">Terraform</div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#concepts">Concepts</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About This Website</h2>
+        <p>
+          This static website showcases my structured learning journey with
+          <strong>Terraform</strong>, focusing on Infrastructure as Code (IaC),
+          AWS resource provisioning, and professional DevOps workflows.
+        </p>
+      </div>
+    </section>
+
+    <!-- Concepts Section -->
+    <section id="concepts" class="section light">
+      <div class="container">
+        <h2>Terraform Core Concepts</h2>
+        <ul class="list">
+          <li>Infrastructure as Code (IaC)</li>
+          <li>Providers & Resources</li>
+          <li>Variables, Outputs, and Locals</li>
+          <li>State Files & Remote Backends</li>
+          <li>Modules & Reusability</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="section">
+      <div class="container">
+        <h2>Terraform Workflow</h2>
+        <div class="workflow">
+          <div class="card">terraform init</div>
+          <div class="card">terraform validate</div>
+          <div class="card">terraform plan</div>
+          <div class="card">terraform apply</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section light">
+      <div class="container">
+        <h2>Hands-On Learning</h2>
+        <div class="projects">
+          <div class="project-card">
+            <h3>AWS EC2 Provisioning</h3>
+            <p>
+              Provisioned EC2 instances using Terraform with variables and
+              outputs.
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>S3 Backend & State Locking</h3>
+            <p>
+              Configured remote state using S3 and DynamoDB for safe
+              collaboration.
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>Reusable Modules</h3>
+            <p>Created reusable Terraform modules following best practices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          Interested in Terraform, AWS, or DevOps? Connect with me on GitHub or
+          LinkedIn.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2025 Terraform Learning Portfolio</p>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.getElementById("nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      const nav = document.querySelector(".nav");
+
+      document.addEventListener("click", function (event) {
+        const clickedInsideNav = nav.contains(event.target);
+
+        if (!clickedInsideNav && navToggle.checked) {
+          navToggle.checked = false;
+        }
+      });
+
+      // Close menu when clicking a link (mobile UX)
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navToggle.checked = false;
+        });
+      });
+    </script>
+  </body>
+</html>

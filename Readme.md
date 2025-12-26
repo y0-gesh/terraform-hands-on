@@ -1,3 +1,4 @@
+![Terraform Logo](./examples/static-website/assets/terraform-logo.svg)
 # Terraform Core Workflow & Concepts (Hands-On Guide)
 
 This document provides a **complete, professional overview of Terraform**, including its core concepts, workflow, command lifecycle, and operational best practices when managing infrastructure on **AWS**.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 64 64"
+     width="64"
+     height="64">
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#5C4EE5"/>
+
+  <!-- Terraform cube (simplified) -->
+  <polygon points="32,14 44,20 32,26 20,20"
+           fill="#FFFFFF"/>
+  <polygon points="20,20 32,26 32,42 20,36"
+           fill="#E0DBFF"/>
+  <polygon points="32,26 44,20 44,36 32,42"
+           fill="#C7BFFF"/>
+
+</svg>

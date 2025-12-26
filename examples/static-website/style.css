@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.header {
+  background: #5c4ee5;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.nav {
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.nav-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5c4ee5;
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #5c4ee5;
+  font-weight: 600;
+}
+
+/* Hamburger hidden on desktop */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle-label span {
+  height: 3px;
+  width: 25px;
+  background: #5c4ee5;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+.nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #5c4ee5;
+  font-weight: 600;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section.light {
+  background: #ffffff;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.list li {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+  border-left: 4px solid #5c4ee5;
+  font-weight: bold;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+ .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #ffffff;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  /* Show hamburger */
+  .nav-toggle-label {
+    display: flex;
+  }
+
+  /* Toggle menu */
+  .nav-toggle:checked + .nav-toggle-label + .nav-links {
+    display: flex;
+  }
+}
