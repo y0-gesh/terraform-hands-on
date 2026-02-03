@@ -18,6 +18,6 @@ resource "aws_security_group" "nginx-aws_security_group" {
   }
 
   tags = {
-    Name = "nginx-sg"
+    Name = "nginx-aws_security_group"
   }
 }
