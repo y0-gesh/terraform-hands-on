@@ -37,10 +37,12 @@ resource "aws_subnet" "main" {
 
 # creating 4 ec2 instance
 resource "aws_instance" "main" {
-  ami           = "ami-0fa91bc90632c73c9"
-  instance_type = "t3.micro"
-  count         = 4
-  subnet_id     = element(aws_subnet.main[*].id, count.index % length(aws_subnet.main))
+  count         = length(var.ec2_config)
+  ami           = var.ec2_config[count.index].ami
+  instance_type = var.ec2_config[count.index].instance_type
+
+  subnet_id = element(aws_subnet.main[*].id, count.index % length(aws_subnet.main))
+
   # 0%2 = 0
   # 1%2 = 1
   # 2%2 = 0 
