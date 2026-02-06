@@ -17,4 +17,16 @@ resource "aws_instance" "main" {
   # instance creation will wait for the vpc to create
   vpc_security_group_ids = [aws_security_group.main.id] #
   depends_on = [aws_security_group.main] # implecit dependence
+
+  lifecycle {
+    # create_before_destroy = true
+    prevent_destroy = true # important instance which don't want to destroy
+    replace_triggered_by = [ aws_security_group.main, aws_security_group.main.ingress ]
+
+    # ignore_changes = [ 
+    #     password_length,
+    #     password_reset_required,
+    #     pgp_key,
+    #  ]
+  }
 }
